@@ -1,0 +1,9 @@
+<p [class]="'bg-one'"> Username :- {{username}}</p>
+<p [class]="'bg-one bg-two '"> Username :- {{username}}</p>
+
+<p [class]="bgOne"> Age :- {{age}}  &  Is Active :- {{isActive}} </p>
+<p [ngClass]="bgThree"> Age :- {{age}}  &  Is Active :- {{isActive}} </p>
+
+<p [ngClass]="isActive ? bgOne  :bgTwo"> Age :- {{age}}  &  Is Active :- {{isActive}} </p>
+
+<button class="btn btn-primary" (click)="isActive=!isActive"> Change Status</button>

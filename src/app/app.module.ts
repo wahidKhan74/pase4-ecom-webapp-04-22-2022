@@ -10,6 +10,12 @@ import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { ChangePasswordComponent } from './auth/change-password/change-password.component';
 import { ProductsComponent } from './products/products.component';
+import { PropertyComponent } from './data-binding/property/property.component';
+import { StyleComponent } from './data-binding/style/style.component';
+import { ClassComponent } from './data-binding/class/class.component';
+import { EventComponent } from './data-binding/event/event.component';
+import { TwoComponent } from './data-binding/two/two.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,11 +26,17 @@ import { ProductsComponent } from './products/products.component';
     LoginComponent,
     RegisterComponent,
     ChangePasswordComponent,
-    ProductsComponent
+    ProductsComponent,
+    PropertyComponent,
+    StyleComponent,
+    ClassComponent,
+    EventComponent,
+    TwoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

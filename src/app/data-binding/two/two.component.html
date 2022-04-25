@@ -1,0 +1,14 @@
+Email  : <input type="text" name="email" id="email" class="form-control" autocomplete="off"  (input)="onEmail($event)">
+
+<div class="alert alert-primary" role="alert">
+   <span [innerText]="email"></span>
+</div>
+
+<br><br>
+<h2>Two way data binding via - ngModel directive</h2>
+
+<input type="text" name="message" id="message" class="form-control" autocomplete="off" [(ngModel)]="message">
+<div class="alert alert-success" role="alert">
+    <span [innerText]="message"></span>
+ </div>
+ 

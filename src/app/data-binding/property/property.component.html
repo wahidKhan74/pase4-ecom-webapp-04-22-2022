@@ -1,0 +1,50 @@
+
+<h2>Data Binding - Interpolation</h2>
+<div class="alert alert-primary" role="alert">
+  Username  :- {{username}}
+</div>
+<div class="alert alert-secondary" role="alert">
+  Age :- {{age}}    -  Is active : - {{isActive}}
+</div>
+<div class="alert alert-success" role="alert">
+  Account  :-  Id : {{account.id}}  ,   Name : {{account.name}} ,  Balance : {{account.balance}} ,  Email : {{account.email}}
+</div>
+<div class="alert alert-danger" role="alert">
+   {{companies}}
+</div>
+<div class="alert alert-warning" role="alert">
+  <ul *ngFor="let name of companies">
+      <li> {{name}}</li>
+  </ul>
+</div>
+
+<img src="{{imagePath1}}" alt="Banner">
+
+<h2>Data Binding - Property Binding</h2>
+
+<div class="alert alert-primary" role="alert">
+    Username :- <span  [innerText]="username"></span>
+</div>
+
+<div class="alert alert-secondary" role="alert">
+    Age :- <span  [innerText]="age"></span>    -  Is active : - <span  [innerText]="isActive"></span>
+  </div>
+  <div class="alert alert-success" role="alert">
+    Account  :-  Id : <span  [innerText]="account.id"></span> ,   
+    Name :  <span  [innerText]="account.name"></span> ,   
+    Balance :  <span  [innerText]="account.balance"></span> ,   
+    Email :  <span  [innerText]="account.email"></span> ,   
+  </div>
+
+  <div class="alert alert-danger" role="alert">
+    <span  [innerText]="companies"></span>
+ </div>
+ <div class="alert alert-warning" role="alert">
+   <ul *ngFor="let name of companies">
+       <li> <span  [innerText]="name"></span> </li>
+   </ul>
+ </div>
+
+ <input type="text" name="username"  [value]="username" >
+ <img [src]="imagePath2" alt="" srcset="">
+ 
