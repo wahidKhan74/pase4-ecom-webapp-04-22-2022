@@ -13,15 +13,32 @@ export class LoginComponent implements OnInit {
     agree: false
   }
 
+  public submitted:boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
   public onSubmit(form:any) {
-   //  console.log(form);
-    console.log(this.login);
-    
+    if(form.valid){
+      this.submitted = true;
+      console.log(this.login);
+    } else {
+      console.log("Invalid Form.");
+      this.validate(form);
+    }    
+  }
+
+  validate(form: any) {
+   Object.keys(form.controls).forEach(field => {
+     const control = form.controls[field];
+     control.markAsTouched({ onlySelf : true });
+   });
+  }
+
+  hasError(field:any){
+    return (field.invalid && field.touched && field.errors);
   }
 }
 
