@@ -16,6 +16,13 @@ import { ClassComponent } from './data-binding/class/class.component';
 import { EventComponent } from './data-binding/event/event.component';
 import { TwoComponent } from './data-binding/two/two.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { ListComponent } from './products/list/list.component';
+import { CreateComponent } from './products/create/create.component';
+import { UpdateComponent } from './products/update/update.component';
+import { DeleteComponent } from './products/delete/delete.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +38,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     StyleComponent,
     ClassComponent,
     EventComponent,
-    TwoComponent
+    TwoComponent,
+    HomeComponent,
+    AboutComponent,
+    NotFoundComponent,
+    ListComponent,
+    CreateComponent,
+    UpdateComponent,
+    DeleteComponent
   ],
   imports: [
     BrowserModule,
