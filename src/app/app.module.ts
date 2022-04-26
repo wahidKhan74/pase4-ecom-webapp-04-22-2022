@@ -15,7 +15,7 @@ import { StyleComponent } from './data-binding/style/style.component';
 import { ClassComponent } from './data-binding/class/class.component';
 import { EventComponent } from './data-binding/event/event.component';
 import { TwoComponent } from './data-binding/two/two.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -36,7 +36,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
