@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-style',
@@ -18,23 +19,7 @@ export class StyleComponent implements OnInit {
   public paddingB = '20px';
 
 
-  // data variables
-  public username: string = "johnsmith";
-  public age: number = 40;
-  public isActive: boolean = false;
-
-  public imagePath1: string = "assets/img/banner.jpg";
-  public imagePath2: string = "assets/img/product.jpg";
-
-  public account = {
-    id: 10001,
-    name: "john snow",
-    balance: 35646.6756,
-    email: 'joh.snow@gmail.com'
-  };
-  public companies: string[] = ['Google', "Microsoft", "Infosys", "Wipro", "Dell"];
-
-  constructor() { }
+  constructor(public dataService: DataService) { }
 
   ngOnInit(): void {
   }

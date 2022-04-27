@@ -1,17 +1,17 @@
 <p [style.background-color]="'#20b4e3'" [style.border]="'2px solid blue'" [style.padding]="'20px'"
-> Username :- {{username}}</p>
+> Username :- {{dataService.username}}</p>
 
 
 <p [style.background-color]="colorA" [style.border]="borderA" [style.padding]="paddingA"
-> Age :- {{age}}  &  Is Active :- {{isActive}} </p>
+> Age :- {{dataService.age}}  &  Is Active :- {{dataService.isActive}} </p>
 
 
-<p [style.background-color]="isActive ? colorB : colorA" 
-[style.border]="isActive ? borderB : borderA"  [style.padding]="isActive ? paddingB : paddingA" >
-    Account  :-  Id : {{account.id}}  ,   
-    Name : {{account.name}} ,  
-    Balance : {{account.balance}} ,  
-    Email : {{account.email}}
+<p [style.background-color]="dataService.isActive ? colorB : colorA" 
+[style.border]="dataService.isActive ? borderB : borderA"  [style.padding]="dataService.isActive ? paddingB : paddingA" >
+    Account  :-  Id : {{dataService.account.id}}  ,   
+    Name : {{dataService.account.name}} ,  
+    Balance : {{dataService.account.balance}} ,  
+    Email : {{dataService.account.email}}
 </p>
 
-<button class="btn btn-primary" (click)="isActive=!isActive"> Change Status</button>
+<button class="btn btn-primary" (click)="dataService.isActive=!dataService.isActive"> Change Status</button>
