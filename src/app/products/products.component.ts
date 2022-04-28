@@ -41,4 +41,24 @@ export class ProductsComponent implements OnInit {
     });
   }
 
+  public onSearch(name:any) {
+    if(name.value !=null || name.value !=""){
+      this.productSrv.searchProducts(name.value).subscribe((response: any) => {
+        // console.log(response);
+        this.productsList = response;
+      });
+    } else {
+      this.getAllproducts();
+    }
+  }
+
+  public onAvailable(available:boolean){
+    this.productSrv.filterProducts(available).subscribe((response: any) => {
+      // console.log(response);
+      this.productsList = response;
+    });
+  }
+  public onAll(){
+    this.getAllproducts();
+  }
 }

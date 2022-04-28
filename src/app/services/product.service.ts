@@ -7,12 +7,24 @@ import { HttpClient } from '@angular/common/http';
 export class ProductAPIService {
 
   private url:string ='http://localhost:8090/products';
+  private searchUrl:string ='http://localhost:8090/search?name=';
+  private filterUrl:string ='http://localhost:8090/filter/product?available=';
 
   constructor(private httpClient : HttpClient) { }
 
    // get all products
    public getProducts() {
     return this.httpClient.get(this.url);
+   }
+
+   // get all products
+   public searchProducts(name:any) {
+    return this.httpClient.get(this.searchUrl+name);
+   }
+
+   // filter all products
+   public filterProducts(available:boolean) {
+    return this.httpClient.get(this.filterUrl+available);
    }
 
    // add one product
