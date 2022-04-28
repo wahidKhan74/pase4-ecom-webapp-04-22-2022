@@ -1,13 +1,17 @@
-<div class="card-deck" >
-    <div class="card" *ngFor="let product of productsList">
-      <!-- <img src="..." class="card-img-top" alt="..."> -->
-      <div class="card-body">
-        <h5 class="card-title">{{product.id}} - {{product.name}}</h5>
-        <p class="card-text">Price : {{product.price}}</p>
-        <p class="card-text">Description : {{product.description}}</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
-      </div>
-    </div>    
+<div class="row card-deck" >
+    <div class="col-md-4 mb-3" *ngFor="let product of productsList">
+      <div class="card"  [class]="product.available ? 'border-success' : 'border-danger' ">
+        <!-- <img src="..." class="card-img-top" alt="..."> -->
+        <div class="card-body">
+          <h5 class="card-title">{{product.id}} - {{product.name}}</h5>
+          <p class="card-text">Price : {{product.price}}</p>
+          <p class="card-text">Description : {{product.description}}</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 mins ago</small>
+          <a class="badge badge-warning mr-3 ml-2 pointer" (click)= "onEdit(product)" >edit</a>
+          <a class="badge badge-danger pointer" (click)= "onDelete(product)">delete</a>
+        </div>
+      </div>  
+    </div>
   </div>

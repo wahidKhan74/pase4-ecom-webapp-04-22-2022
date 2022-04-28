@@ -14,4 +14,19 @@ export class ProductAPIService {
    public getProducts() {
     return this.httpClient.get(this.url);
    }
+
+   // add one product
+   public addProduct(product:any) {
+    return this.httpClient.post(this.url,product);
+   }
+
+  // add one product
+  public updateProduct(product:any) {
+    return this.httpClient.put(this.url,product);
+   }
+
+  // delete one product
+  public deleteProduct(product:any) {
+    return this.httpClient.delete(this.url+"/"+product.id);
+  }
 }
